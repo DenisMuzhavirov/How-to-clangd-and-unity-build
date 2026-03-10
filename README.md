@@ -22,7 +22,7 @@ CompileFlags:
 For `cl` compiler it's the same; for `clang`/`clang++`, use `-I...` instead; for other compilers, go see their docs.
 If you are interested in changing clangd's behavior, see https://clangd.llvm.org/config.
 # File structure
-It's easier if you move out everything you can out of other headers in the "main" header. In the end of this header you should `#include` every other header of your project. You should get something like this:
+It's easier if you move out everything you can out of other headers in the main header. In the end of this header you should `#include` every other header of your project. You should get something like this:
 ```
 #pragma once
 #include <stdint.h>
@@ -47,7 +47,7 @@ static constexpr f32 Pi32 = 3.141592653589793f;
 #include "handmade.h"
 // BUT NO SOURCE FILES HERE!!!
 ```
-Then you just `#include` this "main" header at the top of every source file. After that all includes are managed inside the main header. Don't forget that all your other headers, must have `#pragma once` too.
+Then you just `#include` this main header at the top of every source file. After that all includes are managed inside the main header. Don't forget that all your other headers, must have `#pragma once` too.
 Then finally make a source file for this header that just includes all other sources:
 ```
 #include "unity_build.h"
