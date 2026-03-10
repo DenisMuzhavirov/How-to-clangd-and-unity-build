@@ -13,11 +13,11 @@ Add `.clangd` file in your project directory. For example, I use two files:
     └───code
         └...
 ```
-For unity builds you need to make clangd `#include` your main source file or a corresponding header(you will need this header, so create it if you don't have it anyways). In this example main source and header are named "unity_build":
+For unity builds you need to make clangd `#include` your main header(create it if you don't have one). In this example main source and header are named "unity_build":
 ```
 CompileFlags:
   Compiler: clang-cl
-  Add: [-FIunity_build.cpp]
+  Add: [-FIunity_build.h]
 ```
 For `cl` compiler it's the same; for `clang`/`clang++`, use `-I...` instead; for other compilers, go see their docs.
 If you are interested in changing clangd's behavior, see https://clangd.llvm.org/config.
