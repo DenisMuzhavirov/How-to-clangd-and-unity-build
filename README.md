@@ -48,10 +48,8 @@ static constexpr f32 Pi32 = 3.141592653589793f;
 // BUT NO SOURCE FILES HERE!!!
 ```
 Then you just `#include` this main header at the top of every source file. After that all includes are managed inside the main header. Don't forget that all your other headers, must have `#pragma once` too.
-Then finally make a source file for this header that just includes all other sources:
+Then finally make a source file that just includes all other sources(if you already included main header in every source, then it's not even needed here):
 ```
-#include "unity_build.h"
-
 #ifdef _WIN32
   #include "win32_handmade.cpp"
 #endif // _WIN32
