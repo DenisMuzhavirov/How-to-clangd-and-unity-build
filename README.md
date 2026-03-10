@@ -1,5 +1,5 @@
 # How-to-clangd-and-unity-build
-A how-to for befriending clangd with unity builds for C/C++ devs. I tried my best on making this beginner-friendly, but if you don't understand something or want to make another suggestion, please go create an issue, so I could make it even more clear for others.
+A how-to for befriending clangd with unity builds for C/C++ devs (you can try map this method for similar LSPs). I tried my best on making this beginner-friendly, but if you don't understand something or want to make another suggestion, please go create an issue, so I could make it even more clear for others.
 
 # Configuration file for clangd
 Add `.clangd` file in your project directory. For example, I use two files:
